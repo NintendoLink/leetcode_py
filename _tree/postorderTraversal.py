@@ -53,9 +53,19 @@ class Solution:
 if __name__ == '__main__':
     from treenode import TreeNode
 
-    root = TreeNode(val=1)
-    root.right = TreeNode(val=2)
-    root.right.left = TreeNode(val=3)
+    root = TreeNode(3)
+
+    firstleft = TreeNode(9)
+    firstright = TreeNode(20)
+
+    root.left = firstleft
+    root.right = firstright
+
+    secondleft = TreeNode(15)
+    secondrigth = TreeNode(7)
+
+    firstright.left = secondleft
+    firstright.right = secondrigth
 
     solution = Solution()
     print(solution.postorderTraversal(root))
