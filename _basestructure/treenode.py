@@ -10,6 +10,9 @@ class TreeNode:
         self.right = None
 
 class Node:
+    """
+    多叉树
+    """
     def __init__(self,val = None,children = None):
         self.val = val
         self.children = children
