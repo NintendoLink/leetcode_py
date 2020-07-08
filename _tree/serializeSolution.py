@@ -74,7 +74,7 @@ class Codec:
         res += str(container[last_index]) + "]"
         return res
 
-    def deserialize(self, data):
+    def deserialize2(self, data):
         """Decodes your encoded data to tree.
         这部分代码是对于一棵完全二叉树进行的反序列化
         :type data: str
@@ -123,22 +123,22 @@ class Codec:
 
 
 if __name__ == '__main__':
-    root = TreeNode(1)
-    left = TreeNode(2)
-    right = TreeNode(3)
-    root.left = left
-    root.right = right
-
-    right_left = TreeNode(4)
-    right_right = TreeNode(5)
-
-    right.right = right_right
-    right.left = right_left
+    # root = TreeNode(1)
+    # left = TreeNode(2)
+    # right = TreeNode(3)
+    # root.left = left
+    # root.right = right
+    #
+    # right_left = TreeNode(4)
+    # right_right = TreeNode(5)
+    #
+    # right.right = right_right
+    # right.left = right_left
+    #
+    # solution = Codec()
+    # print(solution.serialize(root))
 
     solution = Codec()
-    print(solution.serialize(root))
-
-    # solution = Codec()
-    # # data = "[1,2,3,None,None,4,5,None,None,None,None,6,7,8,9]"
+    data = "[1,2,3,None,None,4,5,None,None,None,None,6,7,8,9]"
     # data = "[1,2,3,None,None,4,5]"
-    # print(solution.deserialize(data))
+    print(solution.deserialize(data))
